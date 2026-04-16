@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NMA Student Work 2026</title>
+
+    <link rel="stylesheet" href="files/swiper/swiper-bundle.min.css" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            font-size: 80%;
+        }
+
+        @media (width < 768px) {
+            body {
+                font-size: 150%;
+            }
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .nma-carousel-container {
+            width: 100%;
+            height: 100%;
+            /* padding: 0 3%; */
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+
+            --swiper-navigation-color: #fff;
+            --swiper-pagination-color: #333;
+            --swiper-theme-color: #333;
+        }
+
+        .nma-project {
+            /* display: grid;
+            grid-template-columns: 1;
+            grid-template-rows: 70% 30%; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* background: rgb(98, 162, 103); */
+            /* border: 10px solid red; */
+            height: 100%;
+        }
+
+        .nma-artbox {
+            /* background: yellow; */
+        }
+
+        .nma-artbox img {
+            width: 100%;
+            height: 100%;
+            max-height: 70svh;
+            object-fit: contain;
+            /* object-fit: cover; */
+            object-position: center center;
+            filter: drop-shadow(7px 7px 2svh rgb(0 0 0 / 0.25));
+        }
+
+        .nma-artbox video {
+            width: 100%;
+            height: 100%;
+            max-height: 70svh;
+            object-fit: contain;
+            /* object-fit: cover; */
+            object-position: center center;
+            filter: drop-shadow(7px 7px 2svh rgb(0 0 0 / 0.25));
+            /* border-radius: 20px; */
+        }
+
+        .nma-textbox {
+            /* background: pink; */
+            margin-inline: auto;
+            margin-block: 3vh;
+            /* min-height: 200px; */
+        }
+
+        .nma-textbox h2 {
+            margin: 0;
+            font-size: clamp(.8em, 3vw, 2em);
+        }
+
+        .nma-textbox p {
+            margin: 0.3em 0;
+            font-size: clamp(.6em, 2vw, 1em);
+        }
+
+        .nma-textbox .eyebrow {
+            text-transform: uppercase;
+            font-size: clamp(.4em, 1.25vw, .7em);
+            letter-spacing: 0.1em;
+            opacity: 0.5;
+            margin-bottom: 0.5em;
+        }
+
+        .autoplay-progress {
+            position: absolute;
+            right: 16px;
+            top: 16px;
+            z-index: 10;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: .8rem;
+            font-weight: bold;
+            color: var(--swiper-theme-color);
+        }
+
+        .autoplay-progress svg {
+            --progress: 0;
+            position: absolute;
+            left: 0;
+            top: 0px;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            stroke-width: 1px;
+            /* stroke: var(--swiper-theme-color); */
+            stroke: #aaa;
+            fill: none;
+            stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+            stroke-dasharray: 125.6;
+            transform: rotate(-90deg);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="nma-carousel-container">
+
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+
+                <div class="swiper-slide">
+                    <div class="nma-project">
+                        <div class="nma-artbox">
+                            <img src="files/img/VivianBui-IstanbulLogo-ART127.png" alt="">
+                        </div>
+                        <div class="nma-textbox">
+                            <p class="eyebrow">New Media Arts Student</p>
+                            <h2>Vivian Bui</h2>
+                            <p><em>Istanbul Logo</em></p>
+                            <p>ART 127</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="nma-project">
+                        <div class="nma-artbox">
+                            <img src="files/img/GiocheleCorpuz-LihueLoopMobileApp-ART249.jpg" alt="">
+                        </div>
+                        <div class="nma-textbox">
+                            <p class="eyebrow">New Media Arts Student</p>
+                            <h2>Giochele Corpuz</h2>
+                            <p><em>Lihue Loop Mobile App</em></p>
+                            <p>ART 249</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="nma-project">
+                        <div class="nma-artbox">
+                            <img src="files/img/AlyshaCayabyab-BarakokoCanDesigns-ART129.jpg" alt="">
+                        </div>
+                        <div class="nma-textbox">
+                            <p class="eyebrow">New Media Arts Student</p>
+                            <h2>Alysha Cayabyab</h2>
+                            <p><em>Barakoko Can Designs</em></p>
+                            <p>ART 129</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide" data-swiper-autoplay="22000">
+                    <div class="nma-project">
+                        <div class="nma-artbox">
+                            <video src="files/img/GinaTrplett-AetherAirlinesWebsite-ART249-258.mp4" autoplay loop
+                                muted></video>
+                        </div>
+                        <div class="nma-textbox">
+                            <p class="eyebrow">New Media Arts Student</p>
+                            <h2>Gina Triplett</h2>
+                            <p><em>Aether Airlines Website</em></p>
+                            <p>ART 249 &amp; ART 258</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="nma-project">
+                        <div class="nma-artbox">
+                            <img src="files/img/JackieChoy-GuidedMassageApp-ART249.jpg" alt="">
+                        </div>
+                        <div class="nma-textbox">
+                            <p class="eyebrow">New Media Arts Student</p>
+                            <h2>Jackie Choy</h2>
+                            <p><em>Guided Massage App</em></p>
+                            <p>ART 249</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide" data-swiper-autoplay="30000">
+                    <div class="nma-project">
+                        <div class="nma-artbox">
+                            <video src="files/img/VivianBui-AoDaiWebsite-ART249-258.mp4" autoplay loop muted></video>
+                        </div>
+                        <div class="nma-textbox">
+                            <p class="eyebrow">New Media Arts Student</p>
+                            <h2>Vivian Bui</h2>
+                            <p><em>Ao Dai Website</em></p>
+                            <p>ART 249 &amp; ART 258</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="nma-project">
+                        <div class="nma-artbox">
+                            <img src="files/img/IlyseRush-BeanAndBlooomPackaging-ART127.jpg" alt="">
+                        </div>
+                        <div class="nma-textbox">
+                            <p class="eyebrow">New Media Arts Student</p>
+                            <h2>Ilyse Rush</h2>
+                            <p><em>Bean and Bloom Packaging</em></p>
+                            <p>ART 127</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="nma-project">
+                        <div class="nma-artbox">
+                            <img src="files/img/MayaHashem-AlaOnaonaIncensePackage-ART129.jpg" alt="">
+                        </div>
+                        <div class="nma-textbox">
+                            <p class="eyebrow">New Media Arts Student</p>
+                            <h2>Maya Hashem</h2>
+                            <p><em>Ala Onaona Incense Package</em></p>
+                            <p>ART 129</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- Autoplay progress indicator -->
+            <div class="autoplay-progress">
+                <svg viewBox="0 0 48 48">
+                    <circle cx="24" cy="24" r="20"></circle>
+                </svg>
+                <span></span>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="files/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+
+
+        const progressCircle = document.querySelector(".autoplay-progress svg");
+        const progressContent = document.querySelector(".autoplay-progress span");
+
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            loop: true,
+
+            spaceBetween: 100,
+            loop: true,
+            centeredSlides: true,
+            slidesPerView: 1.2,
+
+            effect: "coverflow",
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 0,
+                modifier: 1,
+                slideShadows: false,
+            },
+
+            // If we need pagination
+            // pagination: {
+            //     el: '.swiper-pagination',
+            // },
+
+            // Navigation arrows
+            // navigation: {
+            //     nextEl: '.swiper-button-next',
+            //     prevEl: '.swiper-button-prev',
+            // },
+
+            // autoplay
+            autoplay: {
+                delay: 6000,
+                disableOnInteraction: false,
+            },
+
+            on: {
+                autoplayTimeLeft(s, time, progress) {
+                    progressCircle.style.setProperty("--progress", 1 - progress);
+                    progressContent.textContent = `${Math.ceil(time / 1000)}`;
+                },
+
+                slideChangeTransitionStart: function () {
+                    // 1. Pause all videos in the slider
+                    const allVideos = document.querySelectorAll('.swiper-slide video');
+                    allVideos.forEach(video => video.pause());
+
+                    // 2. Play the video in the currently active slide
+                    const activeSlide = this.slides[this.activeIndex];
+                    const activeVideo = activeSlide.querySelector('video');
+                    if (activeVideo) {
+                        activeVideo.currentTime = 0;
+                        activeVideo.play();
+                    }
+                },
+            },
+
+
+        });
+    </script>
+
+</body>
+
+</html>
